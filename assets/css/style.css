@@ -1,0 +1,111 @@
+﻿body {
+    background-color: #0094ff
+}
+
+.todo-container {
+    background-color: #ffff;
+    width: 800px;
+    border-radius: .5rem;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+    .todo-container .add-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .todo-container .add-box i {
+            font-size: 20px;
+        }
+
+        .todo-container .add-box input {
+            flex: 1;
+            border: none;
+            margin: 0 5px;
+            outline: none;
+            color: #bfbfbf
+        }
+
+        .todo-container .add-box a {
+            background-color: #0094ff;
+            color: #ffff;
+            border-radius: .5rem;
+            text-decoration: none;
+            padding: .25rem 1rem;
+        }
+
+    .todo-container .list-box {
+        margin-top: 1rem;
+    }
+
+        .todo-container .list-box .item {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #bfbfbf;
+            padding: 1rem 0;
+            align-items: center;
+        }
+
+            .todo-container .list-box .item .custome-check {
+                text-decoration: none;
+                cursor: pointer
+            }
+
+                .todo-container .list-box .item .custome-check i {
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    padding: .25rem;
+                    color: #00a1ff;
+                    border: 1px solid #bfbfbf;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                }
+
+                    .todo-container .list-box .item .custome-check i.uncheck-icon {
+                        display: block;
+                    }
+
+                    .todo-container .list-box .item .custome-check i.check-icon {
+                        display: none;
+                    }
+
+            .todo-container .list-box .item.active .custome-check i.uncheck-icon {
+                display: none;
+            }
+
+            .todo-container .list-box .item.active .custome-check i.check-icon {
+                display: block;
+            }
+
+
+            .todo-container .list-box .item .custome-check input {
+                display: none
+            }
+
+
+            .todo-container .list-box .item .title {
+                flex: 1;
+            }
+            .todo-container .list-box .item.active .title {
+               text-decoration:line-through;
+               font-style:italic;
+            }
+
+            .todo-container .list-box .item .remove {
+                text-decoration: none;
+                cursor: pointer
+            }
+
+                .todo-container .list-box .item .remove i {
+                    margin-left: 1rem;
+                    color: #ff0000;
+                    font-size: 15px;
+                    padding: 2px;
+                    border-radius: 50%;
+                    border: 1px solid#b6ff00;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center
+                }
